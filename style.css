@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    box-sizing:border-box;
+}
+
+
+body {
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    justify-content: center;
+    height:100vh;
+    background-color:hsl(204, 43%, 93%);
+    font-family:'Karla';
+    color:white;
+}
+
+main {
+    width:350px;
+}
+
+button {
+    background-color:hsl(71, 73%, 54%);
+    border:none;
+    padding:13px;
+    width:280px;
+    border-radius:5px;
+    position:relative;
+    top:20px;
+    color:white;
+    font-weight:700;
+    box-shadow:0px 2px 5px 3px rgba(0, 0, 0, 0.103);
+    transition:all 0.3s ease;
+    cursor:pointer;
+
+}
+
+button:hover {
+    color:hsl(71, 73%, 54%);
+    background-color:white;
+    box-shadow:0;
+
+}
+
+small {
+    position:relative;
+    bottom:5px;
+    left:5px;
+}
+article {
+    font-size:16px;
+}
+.join {
+    background-color:white;
+    padding:1.3em;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+}
+
+.month {
+    background-color:hsl(179, 62%, 43%);
+    padding:2em 2em 2.5em;
+    text-align:left;
+}
+
+.why {
+    background-color:hsl(179, 46%, 63%);
+    padding:0.3em 1em 0.5em 2em;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+}
+
+article {
+    transition: 0.3s ease-in-out all;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+}
+.attribution { 
+     font-size:12px;   
+     color:black;
+    }
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width:37em)
+{
+    
+    main {
+        display:grid;
+        grid-template-areas:
+        'card1 card1'
+        'card2 card3';
+        place-content: center;
+        width:auto;
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.014);
+        transition:0.5s ease-in all;
+        border-radius: 10px;
+    }
+
+    article:nth-child(1)
+    {
+        grid-area:card1;
+        max-width:700px;
+    }
+    
+    article:nth-child(2)
+    {
+        grid-area:card2;
+        border-bottom-left-radius: 10px;
+        padding:2em 2em 0em 2em;
+        margin-right:-5em;
+
+    }
+    
+    article:nth-child(3)
+    {
+        grid-area:card3;
+        border-bottom-left-radius: 0;
+        width:auto;
+
+    }
+
+    button {
+        width:250px;
+    }
+
+    
+}
